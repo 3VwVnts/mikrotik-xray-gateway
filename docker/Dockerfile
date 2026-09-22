@@ -3,7 +3,7 @@
 # =========================================================
 # Stage 1: hev-socks5-tunnel
 # =========================================================
-FROM alpine:3.21 AS hev
+FROM alpine:3.24 AS hev
 
 ARG HEV_VERSION="2.17.1"
 
@@ -20,7 +20,7 @@ RUN git clone --depth 1 --branch "${HEV_VERSION}" --recursive \
 # =========================================================
 # Stage 2: Xray-core
 # =========================================================
-FROM alpine:3.21 AS fetch
+FROM alpine:3.24 AS fetch
 
 ARG TARGETARCH
 ARG TARGETVARIANT
@@ -46,7 +46,7 @@ RUN set -e; \
 # =========================================================
 # Stage 3: final image
 # =========================================================
-FROM alpine:3.21
+FROM alpine:3.24
 
 RUN apk add --no-cache \
     ca-certificates \
