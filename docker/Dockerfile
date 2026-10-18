@@ -5,7 +5,7 @@
 # =========================================================
 FROM alpine:3.21 AS hev
 
-ARG HEV_VERSION="2.17.1"
+ARG HEV_VERSION="2.19.0"
 
 RUN apk add --no-cache \
     git make gcc musl-dev linux-headers
