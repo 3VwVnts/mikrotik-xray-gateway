@@ -5,7 +5,7 @@
 # =========================================================
 FROM alpine:3.21 AS hev
 
-ARG HEV_VERSION="2.17.1"
+ARG HEV_VERSION="2.20.0"
 
 RUN apk add --no-cache \
     git make gcc musl-dev linux-headers
@@ -24,7 +24,7 @@ FROM alpine:3.21 AS fetch
 
 ARG TARGETARCH
 ARG TARGETVARIANT
-ARG XRAY_VERSION=v26.3.27
+ARG XRAY_VERSION=v26.11.9
 
 RUN apk add --no-cache curl unzip ca-certificates
 
